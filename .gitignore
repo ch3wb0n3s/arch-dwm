@@ -6,23 +6,3 @@
 !.xinitrc
 !.bash_profile
 !*.sh
-
-# Ignore specific directories completely
-.cache/
-.config/
-.local/
-.mozilla/
-.npm/
-.pki/
-.vscode/
-.vscode-oss/
-.dotnet/
-Downloads/
-yay/
-
-# Ignore log files and temporary files
-*.log
-.bash_history
-.viminfo
-.wget-hsts
-.Xauthority
