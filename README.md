@@ -52,5 +52,5 @@ wipefs -a /dev/mmcblk0
 
 7. reboot into the system after installation is complete and run this command
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ibrahimahtsham/arch-dwm/main/setup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ibrahimahtsham/arch-dwm/master/setup.sh | bash
 ```
