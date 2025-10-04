@@ -54,3 +54,21 @@ wipefs -a /dev/mmcblk0
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ibrahimahtsham/arch-dwm/master/setup.sh | bash
 ```
+
+## general commands to rember
+
+### for bluetooth
+```bash
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
+sudo systemctl stop bluetooth
+sudo systemctl start bluetooth
+bluetoothctl
+help
+```
+
+### for wifi
+```bash
+iwctl
+help
+```
