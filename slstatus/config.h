@@ -68,6 +68,7 @@ static const struct arg args[] = {
     { run_command,   " %s|",        "if command -v brightnessctl >/dev/null 2>&1; then brightnessctl -m | awk -F, '{gsub(/%/,\"\"); print $4}'; else bdir=$(ls -d /sys/class/backlight/* 2>/dev/null | head -n1); if [ -n \"$bdir\" ]; then bc=$(cat \"$bdir/brightness\"); mc=$(cat \"$bdir/max_brightness\"); printf \"%d\" $((100*bc/mc)); else echo n/a; fi; fi" },
     { vol_perc,      " %s%%|",      "Master" },
     { wifi_perc,     " %s%%|",      "wlan0" },
+    { battery_perc,  " %s%%|",      "BAT0" },
     { run_command,   "%s|",          "if bluetoothctl show | grep -q 'Powered: yes'; then n=$(bluetoothctl devices Connected | wc -l); if [ \"$n\" -gt 0 ]; then printf ' %s' \"$n\"; else printf ' on'; fi; else printf ' off'; fi" },
     { cpu_perc,      " %s%%|",      NULL },
 	{ ram_perc,      " %s%%|",      NULL },

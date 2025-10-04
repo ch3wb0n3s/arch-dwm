@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu --noconfirm --needed vim git fastfetch base-devel ttf-dejavu ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono openssh brightnessctl
+sudo pacman -Syu --noconfirm --needed vim git fastfetch base-devel ttf-dejavu ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono openssh brightnessctl alsa-utils
 
 # give user brightness control permissions
 sudo usermod -aG video "$USER"   # then log out/in
