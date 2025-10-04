@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu --noconfirm --needed vim git fastfetch base-devel ttf-dejavu ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono openssh
+sudo pacman -Syu --noconfirm --needed vim git fastfetch base-devel ttf-dejavu ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono openssh brightnessctl
+
+# give user brightness control permissions
+sudo usermod -aG video "$USER"   # then log out/in
 
 # enable openSSH
 sudo systemctl enable --now sshd
