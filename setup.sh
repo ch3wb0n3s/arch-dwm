@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 # echo test in green
 echo -e "\e[32m test \e[0m"
