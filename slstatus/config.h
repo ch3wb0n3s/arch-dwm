@@ -73,5 +73,5 @@ static const struct arg args[] = {
     { cpu_perc,      " %s%%|",      NULL },
 	{ ram_perc,      " %s%%|",      NULL },
     { temp,          " %s°|",      "/sys/class/thermal/thermal_zone6/temp" },
-    { run_command,   " %s",          "d=$(date +%-d); suf=th; case $((d%100)) in 11|12|13) suf=th;; *) case $((d%10)) in 1) suf=st;; 2) suf=nd;; 3) suf=rd;; esac;; esac; printf \"%s %d%s %s %s\" \"$(date +%a)\" \"$d\" \"$suf\" \"$(date +%b)\" \"$(date +%Y)\"" },
+    { run_command,   " %s",          "d=$(date +%-d); suf=th; case $((d%100)) in 11|12|13) suf=th;; *) case $((d%10)) in 1) suf=st;; 2) suf=nd;; 3) suf=rd;; esac;; esac; printf \"%s %d%s %s %s@%s\" \"$(date +%a)\" \"$d\" \"$suf\" \"$(date +%b)\" \"$(date +%Y)\" \"$(date +%I:%M:%S%p)\"" },
 };
