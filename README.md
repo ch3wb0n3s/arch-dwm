@@ -52,13 +52,5 @@ wipefs -a /dev/mmcblk0
 
 7. reboot into the system after installation is complete and run this command
 ```bash
-sudo pacman -Syu vim git fastfetch
-```
-
-8. clone my repo with this and run the script to get setup
-```bash
-mkdir -p ~/.local/src && cd ~/.local/src
-git clone https://github.com/ibrahimahtsham/arch-dwm.git
-cd arch-dwm
-./setup.sh
+curl -fsSL https://raw.githubusercontent.com/ibrahimahtsham/arch-dwm/main/quick_setup.sh | bash
 ```
