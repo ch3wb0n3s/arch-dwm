@@ -67,8 +67,7 @@ static const struct arg args[] = {
     /* function      format            argument */
     { run_command,   " %s  ",        "if command -v brightnessctl >/dev/null 2>&1; then brightnessctl -m | awk -F, '{gsub(/%/,\"\"); print $4}'; else bdir=$(ls -d /sys/class/backlight/* 2>/dev/null | head -n1); if [ -n \"$bdir\" ]; then bc=$(cat \"$bdir/brightness\"); mc=$(cat \"$bdir/max_brightness\"); printf \"%d\" $((100*bc/mc)); else echo n/a; fi; fi" },
     { vol_perc,      " %s%%  ",      "Master" },
-    { wifi_perc,     " %s%% ",       "wlan0" },    /* set your wifi iface */
-    { wifi_essid,    "(%s)  ",        "wlan0" },    /* set your wifi iface */
+    { wifi_perc,     " %s%%  ",      "wlan0" },
     { run_command,   "%s  ",          "if bluetoothctl show | grep -q 'Powered: yes'; then n=$(bluetoothctl devices Connected | wc -l); if [ \"$n\" -gt 0 ]; then printf ' %s' \"$n\"; else printf ' on'; fi; else printf ' off'; fi" },
     { cpu_perc,      " %s%%  ",      NULL },
     { run_command,   "GPU %s%%  ",    "if [ -r /sys/class/drm/card0/device/gpu_busy_percent ]; then cat /sys/class/drm/card0/device/gpu_busy_percent; elif command -v nvidia-smi >/dev/null 2>&1; then nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | head -n1; else echo n/a; fi" },
