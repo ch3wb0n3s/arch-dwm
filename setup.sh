@@ -23,6 +23,11 @@ cd ..
 # make dmenu
 cd dmenu-git
 makepkg -Ccfsi --noconfirm
+cd ..
+
+# make slstatus
+cd slstatus
+makepkg -Ccfsi --noconfirm
 
 # put exec dwm in .xinitrc
 cd ~
