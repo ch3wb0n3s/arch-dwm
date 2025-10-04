@@ -3,7 +3,7 @@
 # echo test in green
 # echo -e "\e[32m test \e[0m"
 
-sudo pacman -Syu vim git fastfetch
+sudo pacman -Syu --noconfirm --needed vim git fastfetch
 
 mkdir -p ~/.local/src && cd ~/.local/src
 git clone https://github.com/ibrahimahtsham/arch-dwm.git
