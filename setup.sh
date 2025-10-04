@@ -13,6 +13,16 @@ cd arch-dwm
 # make dwm
 cd dwm
 makepkg -Ccfsi --noconfirm
+cd ..
+
+# make st
+cd st
+makepkg -Ccfsi --noconfirm
+cd ..
+
+# make dmenu
+cd dmenu-git
+makepkg -Ccfsi --noconfirm
 
 # put exec dwm in .xinitrc
 cd ~
