@@ -1,8 +1,30 @@
 # Ignore everything by default
 *
 
-# But don't ignore these files:
+# But not these files:
 !.gitignore
-!.xinitrc
 !.bash_profile
-!*.sh
+!.xinitrc
+!audio-setup.sh
+!post-startup.sh
+!set-max-performance.sh
+!set-mouse-sensitivity.sh
+!startup.sh
+!system-monitor.sh
+
+# Allow the main config files from dwm, slstatus, and st
+!arch-linux-dwm-config/dwm/config.h
+!arch-linux-dwm-config/dwm/config.def.h
+!arch-linux-dwm-config/slstatus/config.h
+!arch-linux-dwm-config/slstatus/config.def.h
+!arch-linux-dwm-config/st/config.h
+!arch-linux-dwm-config/st/config.def.h
+
+# Allow build scripts if needed
+!arch-linux-dwm-config/build-all.sh
+
+# Prevent ignoring directories so allowed files can be tracked
+!arch-linux-dwm-config/
+!arch-linux-dwm-config/dwm/
+!arch-linux-dwm-config/slstatus/
+!arch-linux-dwm-config/st/
