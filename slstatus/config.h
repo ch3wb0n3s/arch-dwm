@@ -70,8 +70,7 @@ static const struct arg args[] = {
     { wifi_perc,     " %s%%  ",      "wlan0" },
     { run_command,   "%s  ",          "if bluetoothctl show | grep -q 'Powered: yes'; then n=$(bluetoothctl devices Connected | wc -l); if [ \"$n\" -gt 0 ]; then printf ' %s' \"$n\"; else printf ' on'; fi; else printf ' off'; fi" },
     { cpu_perc,      " %s%%  ",      NULL },
-    { run_command,   "GPU %s%%  ",    "if [ -r /sys/class/drm/card0/device/gpu_busy_percent ]; then cat /sys/class/drm/card0/device/gpu_busy_percent; elif command -v nvidia-smi >/dev/null 2>&1; then nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | head -n1; else echo n/a; fi" },
-    { ram_perc,      " %s%%  ",      NULL },
-    { temp,          " %s°C  ",      "/sys/class/thermal/thermal_zone0/temp" }, /* adjust if needed */
+	{ ram_perc,      " %s%%  ",      NULL },
+    { temp,          " %s°C  ",      "/sys/class/thermal/thermal_zone6/temp" },
     { run_command,   " %s",          "d=$(date +%-d); suf=th; case $((d%100)) in 11|12|13) suf=th;; *) case $((d%10)) in 1) suf=st;; 2) suf=nd;; 3) suf=rd;; esac;; esac; printf \"%s %d%s %s %s\" \"$(date +%a)\" \"$d\" \"$suf\" \"$(date +%b)\" \"$(date +%Y)\"" },
 };
