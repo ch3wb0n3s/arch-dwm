@@ -85,6 +85,13 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	/* Brightness */
+	{ MODKEY,                       XK_F6,     spawn,          SHCMD("brightnessctl set 5%-") },
+	{ MODKEY,                       XK_F7,     spawn,          SHCMD("brightnessctl set +5%") },
+	/* Audio (PipeWire wpctl) */
+	{ MODKEY,                       XK_F8,     spawn,          SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") },
+	{ MODKEY,                       XK_F9,     spawn,          SHCMD("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-") },
+	{ MODKEY,                       XK_F10,    spawn,          SHCMD("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
