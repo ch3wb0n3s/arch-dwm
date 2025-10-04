@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Install deps for building/running dwm
-sudo pacman -Syu --noconfirm --needed base-devel
+sudo pacman -Syu --noconfirm --needed base-devel fastfetch
 
 # Ensure we operate from ~/.local/src/arch-dwm
 cd ~/.local/src/arch-dwm
