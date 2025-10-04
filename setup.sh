@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu --noconfirm --needed vim git fastfetch base-devel
+sudo pacman -Syu --noconfirm --needed vim git fastfetch base-devel ttf-dejavu
 
 # make directories and clone repo from which dwm configs will be set
 mkdir .local
