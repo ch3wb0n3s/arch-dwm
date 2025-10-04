@@ -49,3 +49,8 @@ wipefs -a /dev/mmcblk0
     - audio: pipewire
     - kernel: linux-lts (use ctrl + c to get rid of linux)
     - time sync (NTP): enabled
+
+7. reboot into the system after installation is complete and run this command
+```bash
+sudo pacman -Syu vim git
+```
