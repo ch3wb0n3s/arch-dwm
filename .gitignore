@@ -1,0 +1,4 @@
+/dwm/*
+
+!/dwm/config.h
+!/dwm/config.h.backup
