@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# echo test in green
+echo -e "\e[32m test \e[0m"
+
 sudo pacman -Syu vim git fastfetch
 
 mkdir -p ~/.local/src && cd ~/.local/src
-echo "test"
 git clone https://github.com/ibrahimahtsham/arch-dwm.git
 cd arch-dwm
 
