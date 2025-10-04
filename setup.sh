@@ -4,9 +4,9 @@ set -euo pipefail
 sudo pacman -Syu vim git fastfetch
 
 mkdir -p ~/.local/src && cd ~/.local/src
+echo "test"
 git clone https://github.com/ibrahimahtsham/arch-dwm.git
 cd arch-dwm
-./setup.sh
 
 # Install deps for building/running dwm
 sudo pacman -Syu --noconfirm --needed base-devel
