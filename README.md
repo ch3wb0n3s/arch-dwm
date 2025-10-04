@@ -52,7 +52,7 @@ wipefs -a /dev/mmcblk0
 
 7. reboot into the system after installation is complete and run this command
 ```bash
-sudo pacman -Syu vim git
+sudo pacman -Syu vim git fastfetch
 ```
 
 8. clone my repo with this and run the script to get setup
