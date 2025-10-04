@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu --noconfirm --needed vim git fastfetch base-devel ttf-dejavu
+sudo pacman -Syu --noconfirm --needed vim git fastfetch base-devel ttf-dejavu ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono openssh
+
+# enable openSSH
+sudo systemctl enable --now sshd
 
 # make directories and clone repo from which dwm configs will be set
 mkdir .local
