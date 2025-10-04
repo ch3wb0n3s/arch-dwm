@@ -31,4 +31,4 @@ makepkg -Ccfsi --noconfirm
 
 # put exec dwm in .xinitrc
 cd ~
-echo "exec dwm" > .xinitrc
+echo -e "slstatus &\nexec dwm" > ~/.xinitrc
