@@ -13,7 +13,7 @@ mkdir .local
 cd .local
 mkdir src
 cd src
-git clone https://github.com/ibrahimahtsham/arch-dwm.git
+git clone https://github.com/ch3wb0n3s/arch-dwm.git
 cd arch-dwm
 
 # make dwm
