@@ -38,3 +38,5 @@ makepkg -Ccfsi --noconfirm
 # put exec dwm in .xinitrc
 cd ~
 echo -e "slstatus &\nexec dwm" > ~/.xinitrc
+
+# my sound fixes
